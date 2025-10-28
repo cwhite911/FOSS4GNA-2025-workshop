@@ -1,7 +1,13 @@
 [project]
 name = "foss4gna-2025-workshop"
 version = "0.1.0"
-description = "GRASS Addon Development with Python"
+description = "GRASS addon Development with Python"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "ruff>=0.14.2",
+]
