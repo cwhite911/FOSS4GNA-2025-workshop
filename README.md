@@ -35,15 +35,21 @@ By the end of this workshop, participants will be able to:
 
 ## Workshop Structure
 
-- Introduction to GRASS
-- Overview of GRASS tools and Addons
-- Setting up the development environment
-- Developing a GRASS Addon with Python
-  - setting up the addon structure
-  - implementing geospatial processing functionality
+- GRASS Fundamentals
+  - Intro to GRASS
+  - GRASS Scripting with Python
+  - Write your first GRASS script
+- From GRASS scripts to GRASS addons
+  - Setting up the development environment
+  - Addon structure
+  - Standardized options and flags
+  - Local testing and debugging
   - best practices for coding and documentation
-  - testing and debugging
-- How to write your first PR to grass-addons
+- Project
+  - Build a parallelized GRASS addon with CLI and GUI
+  - Testing and packaging
+  - Submitting to grass-addons
+- Wrap-up
 - Bonus: C Addon Overview
 - Bonus: AI-assisted coding for GRASS addon development the good, the bad, and
 the ugly.
