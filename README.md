@@ -6,6 +6,8 @@ Workshop Participant Level: Advanced
 
 Learn to develop [GRASS addons](https://github.com/OSGeo/grass-addons) with Python! Together, we will develop a parallelized custom addon with Python, command line, and graphical user interfaces. [GRASS](https://grass.osgeo.org/) works as a powerful geospatial processing engine that works on a small laptop to a huge supercomputer. GRASS also makes it easy to move from using a [graphical user interface (GUI)](https://grass.osgeo.org/grass85/manuals/helptext.html) to command line interface or [Python API](https://grass.osgeo.org/grass85/manuals/python_intro.html). During this workshop we will develop a GRASS addon exploring the various [GRASS Python modules](https://grass.osgeo.org/grass-devel/manuals/libpython/index.html), tooling, and best practice required to produce high quality open source software. The bonus material for this workshop will also cover tools written in C.
 
+## Prerequisites
+
 To get the most out of this workshop, basic Python and GIS experience is recommended. The workshop will use an online environment, so no software installation on laptops is required from participants.
 
 ## Learning Objectives
@@ -17,6 +19,20 @@ By the end of this workshop, participants will be able to:
 - Use GRASS Python modules to develop geospatial processing tools
 - Develop command line and graphical user interfaces for GRASS addons
 - Be ready to contribute GRASS addons to the community repository :green_heart:
+
+## Workshop Structure
+
+- Introduction to GRASS
+- Overview of GRASS tools and Addons
+- Setting up the development environment
+- Developing a GRASS Addon with Python
+  - setting up the addon structure
+  - implementing geospatial processing functionality
+  - best practices for coding and documentation
+  - testing and debugging
+- How to write your first PR to grass-addons
+- Bonus: C Addon Overview
+- Bonus: AI-assisted coding for GRASS addon development the good, the bad, and the ugly.
 
 ## Resources
 
@@ -44,5 +60,9 @@ handles GRASS projects and sessions in Python,
 
 ## Instructors
 
-- Corey White
-- Caitlin Haedrich
+- [Corey White](https://github.com/cwhite911)
+- [Caitlin Haedrich](https://github.com/chaedri)
+
+## Funding
+
+Add me..
