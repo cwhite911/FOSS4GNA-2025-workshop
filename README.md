@@ -8,6 +8,16 @@ Learn to develop [GRASS addons](https://github.com/OSGeo/grass-addons) with Pyth
 
 To get the most out of this workshop, basic Python and GIS experience is recommended. The workshop will use an online environment, so no software installation on laptops is required from participants.
 
+## Learning Objectives
+
+By the end of this workshop, participants will be able to:
+
+- Understand the structure of a GRASS addon
+- Understand community best practices for GRASS addon development
+- Use GRASS Python modules to develop geospatial processing tools
+- Develop command line and graphical user interfaces for GRASS addons
+- Be ready to contribute GRASS addons to the community repository :green_heart:
+
 ## Resources
 
 - [GRASS Website](https://grass.osgeo.org/)
