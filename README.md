@@ -2,6 +2,8 @@
 
 Workshop Participant Level: Advanced
 
+![GRASS Logo](https://grass.osgeo.org/images/logos/grass-gradient-horizontal.svg)
+
 Learn to develop [GRASS addons](https://github.com/OSGeo/grass-addons) with Python! Together, we will develop a parallelized custom addon with Python, command line, and graphical user interfaces. [GRASS](https://grass.osgeo.org/) works as a powerful geospatial processing engine that works on a small laptop to a huge supercomputer. GRASS also makes it easy to move from using a [graphical user interface (GUI)](https://grass.osgeo.org/grass85/manuals/helptext.html) to command line interface or [Python API](https://grass.osgeo.org/grass85/manuals/python_intro.html). During this workshop we will develop a GRASS addon exploring the various [GRASS Python modules](https://grass.osgeo.org/grass-devel/manuals/libpython/index.html), tooling, and best practice required to produce high quality open source software. The bonus material for this workshop will also cover tools written in C.
 
 To get the most out of this workshop, basic Python and GIS experience is recommended. The workshop will use an online environment, so no software installation on laptops is required from participants.
