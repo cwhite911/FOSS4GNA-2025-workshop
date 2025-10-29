@@ -1,0 +1,34 @@
+{
+	"name": "GRASS Addon Workshop",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"runArgs": [
+		"--init",
+		"--env",
+		"DISPLAY",
+		"--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw"
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"python.defaultInterpreterPath": "/usr/bin/python3",
+				"python.analysis.autoImportCompletions": true,
+				"editor.formatOnSave": true
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter",
+				"ms-vscode.cpptools",
+				"eamodio.gitlens"
+			]
+		}
+	},
+	"postCreateCommand": "grass --version && echo 'GRASS is ready!'",
+	"remoteUser": "root",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspaces/grass-addon-workshop,type=bind,consistency=cached"
+	]
+}

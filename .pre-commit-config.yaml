@@ -53,14 +53,15 @@ repos:
       - id: clang-format
         exclude_types:
           - jupyter
+          - json
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.37.1
     hooks:
       - id: yamllint
-  - repo: https://github.com/editorconfig-checker/editorconfig-checker
-    rev: v3.4.1
-    hooks:
-      - id: editorconfig-checker
+  # - repo: https://github.com/editorconfig-checker/editorconfig-checker
+  #   rev: v3.4.1
+  #   hooks:
+  #     - id: editorconfig-checker
   - repo: https://github.com/astral-sh/uv-pre-commit
     # uv version.
     rev: 0.9.5

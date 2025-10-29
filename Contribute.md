@@ -6,6 +6,5 @@ The project uses [uv](https://docs.astral.sh/uv/getting-started/installation/),
 so install it first if you don't have it already.
 
 ```bash
-pip install pre-commit
-pre-commit install
+uv add --dev pre-commit ruff
 ```

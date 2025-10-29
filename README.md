@@ -35,9 +35,11 @@ By the end of this workshop, participants will be able to:
 
 ## Workshop Structure
 
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?template=true)
+
 - GRASS Fundamentals
   - Intro to GRASS
-  - GRASS Scripting with Python
+  - GRASS scripting with Python
   - Write your first GRASS script
 - From GRASS scripts to GRASS addons
   - Setting up the development environment

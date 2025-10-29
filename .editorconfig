@@ -84,7 +84,7 @@ trim_trailing_whitespace = false
 trim_trailing_whitespace = false
 indent_style = space
 # TODO: To enable when files are fixed:
-# indent_size = 2
+indent_size = 2
 
 # Exclude some files from rules
 [*.{ascii,asc,ref,rtf,po,ps,svg}]
