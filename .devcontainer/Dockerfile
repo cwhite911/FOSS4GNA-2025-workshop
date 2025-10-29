@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Optional: Pre-install Jupyter if you want to use notebooks
-RUN pip install jupyterlab ipywidgets
+# RUN pip install jupyterlab ipywidgets
 
 # Create workshop directory
 WORKDIR /workspaces/grass-addon-workshop
