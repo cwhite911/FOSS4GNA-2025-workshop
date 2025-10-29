@@ -38,10 +38,12 @@ By the end of this workshop, participants will be able to:
 
 ## Workshop Outline
 
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?template=true)
+
 ### Part 1: GRASS Fundamentals, 45 min (L.O. 1 and 2)
 
 - [Intro to GRASS](https://grass.osgeo.org/grass-devel/manuals/index.html)
-- [GRASS Scripting with Python](./workshop/Scripting_with_GRASS.ipynb)
+- [GRASS scripting with Python](./workshop/Scripting_with_GRASS.ipynb)
 - [Write your first GRASS script](./workshop/my_grass_script.py)
 
 #### _10 min Break 1_
