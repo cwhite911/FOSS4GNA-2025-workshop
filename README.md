@@ -27,28 +27,42 @@ installation on laptops is required from participants.
 
 By the end of this workshop, participants will be able to:
 
-- Understand the structure of a GRASS addon
-- Understand community best practices for GRASS addon development
-- Use GRASS Python modules to develop geospatial processing tools
-- Develop command line and graphical user interfaces for GRASS addons
-- Be ready to contribute GRASS addons to the community repository :green_heart:
+1. Explain GRASS fundamentals including:
+   - available engine interfaces
+   - how to manage geospatial data with projects,
+   - and how to leverage computational region for effient processing
+2. Use GRASS Python modules to develop geospatial processing tools
+3. Describe the structure of a GRASS addon and community best practices for development
+4. Develop command line and graphical user interfaces for GRASS addons
+5. Be ready to contribute GRASS addons to the community repository :green_heart:
 
-## Workshop Structure
+## Workshop Outline
 
-- GRASS Fundamentals
-  - Intro to GRASS
-  - GRASS Scripting with Python
-  - Write your first GRASS script
-- From GRASS scripts to GRASS addons
-  - Setting up the development environment
-  - Addon structure
-  - Standardized options and flags
-  - Local testing and debugging
-  - best practices for coding and documentation
-- Project
-  - Build a parallelized GRASS addon with CLI and GUI
-  - Testing and packaging
-  - Submitting to grass-addons
+### Part 1: GRASS Fundamentals, 45 min (L.O. 1 and 2)
+
+- [Intro to GRASS](https://grass.osgeo.org/grass-devel/manuals/index.html)
+- [GRASS Scripting with Python](./workshop/Scripting_with_GRASS.ipynb)
+- [Write your first GRASS script](./workshop/my_grass_script.py)
+
+#### _10 min Break 1_
+
+### Part 2: From GRASS scripts to GRASS addons, 45 min (L.O. 3 and 4)
+
+- Setting up the development environment
+- Addon structure and best practices
+- Standardized options and flags
+- Local testing and debugging
+
+#### _10 min Break 2_
+
+### Part 3: Hands-On Project, 45 min (L.O. 4 and 5)
+
+- Build a parallelized GRASS addon with CLI and GUI
+- Testing and packaging
+- Submitting to grass-addons
+
+### Conclusion, remaining time
+
 - Wrap-up
 - Bonus: C Addon Overview
 - Bonus: AI-assisted coding for GRASS addon development the good, the bad, and
