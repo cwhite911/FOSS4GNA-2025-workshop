@@ -16,9 +16,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     cmake \
     python3 \
     python3-pip \
-    python3-grass \
-    grass-dev \
-    python3-grass-dev \
     python3-numpy \
     python3-rich \
     python3-matplotlib \
@@ -30,7 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Optional: Pre-install Jupyter if you want to use notebooks
-RUN pip install jupyterlab ipywidgets
+# RUN pip install jupyterlab ipywidgets
 
 # Create workshop directory
 WORKDIR /workspaces/grass-addon-workshop
