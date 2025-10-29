@@ -3,11 +3,8 @@
 import subprocess
 import sys
 
-from grass.tools import Tools
 
-
-def run_simwe(elevation, rainfall_rate=40, env=None):
-    tools = Tools()
+def run_simwe(elevation, rainfall_rate=40, tools=None):
     tools.r_slope_aspect(elevation=elevation, dx="dx", dy="dy")
     tools.r_sim_water(
         elevation=elevation,
@@ -29,14 +26,11 @@ def main():
     import grass.script as gs
     from grass.tools import Tools
 
-    # Create a new project
-    gs.create_project(path="path/to/my_project", epsg="3358")
-
     # Initialize the GRASS session
     with gs.setup.init("path/to/my_project") as session:
         tools = Tools(session=session)
         tools.g_region(raster="elevation")
-        run_simwe(elevation="elevation", rainfall_rate=60, env=None)
+        run_simwe(elevation="elevation", rainfall_rate=60, tools=tools)
 
 
 if __name__ == "__main__":
