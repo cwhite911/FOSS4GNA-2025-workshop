@@ -9,6 +9,7 @@ dependencies = []
 [dependency-groups]
 dev = [
     "cookiecutter>=2.6.0",
+    "ipykernel>=7.1.0",
     "pre-commit>=4.3.0",
     "ruff>=0.14.2",
 ]

@@ -26,11 +26,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pytest \
     && rm -rf /var/lib/apt/lists/*
 
+# Download the latest installer
+ADD https://astral.sh/uv/install.sh /uv-installer.sh
+
+# Run the installer then remove it
+RUN sh /uv-installer.sh && rm /uv-installer.sh
+
+# Ensure the installed binary is on the `PATH`
+ENV PATH="/root/.local/bin/:$PATH"
+
+COPY --from=ghcr.io/astral-sh/uv:0.9.6 /uv /uvx /bin/
+
 # Optional: Pre-install Jupyter if you want to use notebooks
 # RUN pip install jupyterlab ipywidgets
 
 # Create workshop directory
 WORKDIR /workspaces/grass-addon-workshop
+
+RUN uv sync --locked
 
 # Default entry point
 CMD ["/bin/bash"]
