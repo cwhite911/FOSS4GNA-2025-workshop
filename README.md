@@ -38,7 +38,7 @@ By the end of this workshop, participants will be able to:
 
 ## Workshop Outline
 
-[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?template=true)
+[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=cwhite911%2FFOSS4GNA-2025-workshop&ref=main&template=true)
 
 ### Part 1: GRASS Fundamentals, 45 min (L.O. 1 and 2)
 
