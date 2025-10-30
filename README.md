@@ -48,7 +48,7 @@ By the end of this workshop, participants will be able to:
 
 #### _10 min Break 1_
 
-### Part 2: From GRASS scripts to GRASS addons, 45 min (L.O. 3 and 4)
+### [Part 2: From GRASS scripts to GRASS addons, 45 min (L.O. 3 and 4)](./workshop/part_2_addons/README.md)
 
 - Setting up the development environment
 - Addon structure and best practices
