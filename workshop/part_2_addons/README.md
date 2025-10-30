@@ -1,13 +1,13 @@
 # Part 2 - From GRASS scripts to GRASS addons
 
-- Setting up the development environment
+1. Setting up the development environment
   - [grass-addons](https://github.com/OSGeo/grass-addons)
-- Addon structure and best practices
+2. Addon structure and best practices
   - [grass-addon-cookiecutter](https://github.com/OSGeo/grass-addon-cookiecutter)
   - [GRASS Programming Style Guide](https://grass.osgeo.org/grass85/manuals/style_guide.html)
-- Standardized options and flags
+3. Standardized options and flags
   - [Standard Parser Options][parser] standard option structure
-- Local testing and debugging
+4. Local testing and debugging
   - [GRASS Testing Framework](https://grass.osgeo.org/grass85/manuals/libpython/gunittest_testing.html#)
 
 
