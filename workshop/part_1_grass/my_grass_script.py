@@ -4,16 +4,14 @@ import subprocess
 import sys
 
 
-def run_simwe(elevation, rainfall_rate=40, tools=None):
+def run_simwe(elevation, rainfall_rate=10, depth_output="depth", tools=None):
     tools.r_slope_aspect(elevation=elevation, dx="dx", dy="dy")
     tools.r_sim_water(
         elevation=elevation,
         dx="dx",
         dy="dy",
-        rain=rainfall_rate,
-        depth="depth",
-        flags="t",
-        niterations=30,
+        rain_value=rainfall_rate,
+        depth=depth_output,
     )
 
 
@@ -27,9 +25,11 @@ def main():
     from grass.tools import Tools
 
     # Initialize the GRASS session
-    with gs.setup.init("path/to/my_project") as session:
+    with gs.setup.init("/root/nc_basic_spm_grass7") as session:
         tools = Tools(session=session)
-        tools.g_region(raster="elevation")
+        tools.g_region(
+            raster="elevation", res=40
+        )  # notice res downsampling so this script runs quickly!
         run_simwe(elevation="elevation", rainfall_rate=60, tools=tools)
 
 
