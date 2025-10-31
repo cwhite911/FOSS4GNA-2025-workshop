@@ -14,9 +14,10 @@
 		"vscode": {
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/bash",
-				"python.defaultInterpreterPath": "/usr/bin/python3",
 				"python.analysis.autoImportCompletions": true,
-				"editor.formatOnSave": true
+				"editor.formatOnSave": true,
+				"python.defaultInterpreterPath": "/workspaces/FOSS4GNA-2025-workshop/.venv/bin/python",
+				"python.venvPath": "/workspaces/FOSS4GNA-2025-workshop"
 			},
 			"extensions": [
 				"ms-python.python",

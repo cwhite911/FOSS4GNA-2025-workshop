@@ -37,13 +37,8 @@ ENV PATH="/root/.local/bin/:$PATH"
 
 COPY --from=ghcr.io/astral-sh/uv:0.9.6 /uv /uvx /bin/
 
-# Optional: Pre-install Jupyter if you want to use notebooks
-# RUN pip install jupyterlab ipywidgets
-
 # Create workshop directory
 WORKDIR /workspaces/grass-addon-workshop
-
-# RUN uv sync --locked
 
 # Default entry point
 CMD ["/bin/bash"]
