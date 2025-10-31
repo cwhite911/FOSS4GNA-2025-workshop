@@ -165,6 +165,7 @@ The complete list of standard options and flags can be found in the
 ### Testing and debugging
 
 [GRASS Testing Framework][gunittest_testing]
+[GRASS Unit Testing with Python](https://github.com/OSGeo/grass-addons/blob/grass8/doc/development/submitting/UNIT_TESTS.md)
 
 ## Addon Development Steps
 
