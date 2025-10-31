@@ -43,5 +43,7 @@ COPY --from=ghcr.io/astral-sh/uv:0.9.6 /uv /uvx /bin/
 # Create workshop directory
 WORKDIR /workspaces/grass-addon-workshop
 
+# RUN uv sync --locked
+
 # Default entry point
 CMD ["/bin/bash"]

@@ -26,10 +26,10 @@
 			]
 		}
 	},
-	"postCreateCommand": [
-		"uv sync --locked",
-		"grass --version && echo 'GRASS is ready!'"
-	],
+	"postCreateCommand": {
+		"uv": "uv sync --locked",
+		"grass": ["grass", "--version", "&&", "echo", "'GRASS is ready!'"]
+	},
 	"remoteUser": "root",
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/workspaces/grass-addon-workshop,type=bind,consistency=cached"
