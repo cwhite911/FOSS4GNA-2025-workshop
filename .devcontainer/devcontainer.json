@@ -27,12 +27,15 @@
 			]
 		}
 	},
+	"containerEnv": {
+		"JUPYTER_PATH": "/workspaces/FOSS4GNA-2025-workshop/.venv/share/jupyter"
+	},
 	"postCreateCommand": {
 		"uv": "uv sync --locked",
 		"grass": ["grass", "--version", "&&", "echo", "'GRASS is ready!'"]
 	},
 	"remoteUser": "root",
 	"mounts": [
-		"source=${localWorkspaceFolder},target=/workspaces/grass-addon-workshop,type=bind,consistency=cached"
+		"source=${localWorkspaceFolder},target=/workspaces/FOSS4GNA-2025-workshop,type=bind,consistency=cached"
 	]
 }
