@@ -184,7 +184,8 @@ install it on your own machine using the following documentation for local
 use ([cookiecutter install docs][cookiecutter_install]).
 
 ```bash
-cookiecutter gh:OSGeo/grass-addon-cookiecutter
+# Use for the current stable release
+# cookiecutter gh:OSGeo/grass-addon-cookiecutter
 
 cookiecutter https://github.com/cwhite911/grass-addon-cookiecutter --checkout grass-tools
 ```
