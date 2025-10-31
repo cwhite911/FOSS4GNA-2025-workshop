@@ -43,8 +43,8 @@ By the end of this workshop, participants will be able to:
 ### Part 1: GRASS Fundamentals, 45 min (L.O. 1 and 2)
 
 - [Intro to GRASS](https://grass.osgeo.org/grass-devel/manuals/index.html)
-- [GRASS scripting with Python](./workshop/Scripting_with_GRASS.ipynb)
-- [Write your first GRASS script](./workshop/my_grass_script.py)
+- [GRASS scripting with Python](./workshop/part_1_grass/Scripting_with_GRASS.ipynb)
+- [Write your first GRASS script](./workshop/part_1_grass/my_grass_script.py)
 
 #### _10 min Break 1_
 
