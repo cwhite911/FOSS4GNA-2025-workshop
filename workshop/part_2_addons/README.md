@@ -57,6 +57,34 @@ r.myaddon
 
 ```
 
+#### Makefile
+
+A Makefile is required to build and install the addon within the GRASS environment.
+Here is a simple example of a Makefile for an addon named `r.myaddon`:
+
+```makefile
+MODULE_TOPDIR = ../..
+
+PGM=r.myaddon
+
+include $(MODULE_TOPDIR)/include/Make/Script.make
+
+default: script
+```
+
+**MOULE_TOPDIR**
+  points to the root directory of the GRASS source code, which is necessary for
+  building the addon.
+
+**PGM**
+  specifies the name of the addon module.
+  
+**include**
+  directive includes the standard Makefile rules for building GRASS scripts.
+
+**default**
+target specifies that the default action is to build the script.
+
 #### r.myaddon.py
 
 ##### header template
@@ -102,15 +130,16 @@ parsed by GRASS when the module is run. For example:
 # %end
 ```
 
-Keywords help users find the module when searching in GRASS, and the description
-provides a brief overview of what the module does.
+> Note: The `%module` and `%end` tags are required to define the module
+metadata.
+
+**Keywords**
+  help users find the module when searching in GRASS, and the
+  description provides a brief overview of what the module does.
 
 Look at existing Keywords in the
 [keyword list documentation][grass_keywords]
 when deciding on keywords for your addon.
-
-> Note: The `%module` and `%end` tags are required to define the module
-metadata.
 
 ##### options and flags
 
@@ -123,9 +152,8 @@ can use the following syntax:
 # %end
 ```
 
-The keywords are rendered as `tags` in the documentation.
-
 ![keywords rendered as tags](../assets/keywords.png)
+[*The keywords are rendered as `tags` in the documentation.*](https://grass.osgeo.org/grass85/manuals/r.basins.fill.html)
 
 The complete list of standard options and flags can be found in the
 [GRASS Parser Options documentation][grass_parser].
