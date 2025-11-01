@@ -84,10 +84,10 @@ After the header, we define the module's description, keywords, options and flag
 GRASS provides a standardized way to define these using the
 [standard Parser Options][grass_parser] standard option structure.
 
-#### Description and Keywords
+#### Tool Metadata
 
-We define the module's description and keywords using special comments that are
-parsed by GRASS when the module is run. For example:
+We define the module's metadata with a description and keywords using
+special comments that are parsed by GRASS when the module is run. For example:
 
 ```python
 # %module
@@ -103,6 +103,17 @@ metadata.
 **Keywords**
   help users find the module when searching in GRASS, and the
   description provides a brief overview of what the module does.
+
+- the **first** keyword is the tool family which goes to the
+  [tool family index](https://grass.osgeo.org/grass-devel/manuals/general.html)
+  in the manual and should correspond to the first part of the tool name
+  (e.g., r is for raster).
+- the **second** keyword is the overall topic which goes to the
+  [topic index](https://grass.osgeo.org/grass-devel/manuals/topics.html) in the
+  manual
+- the **third** (and more) keyword goes to the
+  [keyword index](https://grass.osgeo.org/grass-devel/manuals/keywords.html) in
+  the manual
 
 Look at existing Keywords in the
 [keyword list documentation][grass_keywords]
