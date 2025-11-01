@@ -40,7 +40,7 @@ By the end of this workshop, participants will be able to:
 
 [![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=cwhite911%2FFOSS4GNA-2025-workshop&ref=main&template=true)
 
-### Part 1: GRASS Fundamentals, 45 min (L.O. 1 and 2)
+### Part 1: GRASS Fundamentals, 45 min
 
 - [Intro to GRASS](https://grass.osgeo.org/grass-devel/manuals/index.html)
 - [GRASS scripting with Python](./workshop/part_1_grass/Scripting_with_GRASS.ipynb)
@@ -48,16 +48,17 @@ By the end of this workshop, participants will be able to:
 
 #### _10 min Break 1_
 
-### [Part 2: From GRASS scripts to GRASS addons, 45 min (L.O. 3 and 4)](./workshop/part_2_addons/README.md)
+### Part 2: From GRASS scripts to GRASS addons, 45 min
 
-- Setting up the development environment
-- Addon structure and best practices
-- Standardized options and flags
-- Local testing and debugging
+- [What is a GRASS addon and why write one?](./workshop/part_2_addons/Intro.md)
+- [The development environment](.workshop/part_2_addons/Addon_Structure.md)
+  - Addon structure, best practices and standardized options and flags
+  - Local testing and debugging
+- [How to contribute an addon](./workshop/part_2_addons/Developing_an_addon.md)
 
 #### _10 min Break 2_
 
-### Part 3: Hands-On Project, 45 min (L.O. 4 and 5)
+### Part 3: Hands-On Project, 45 min
 
 - Build a parallelized GRASS addon with CLI and GUI
 - Testing and packaging
