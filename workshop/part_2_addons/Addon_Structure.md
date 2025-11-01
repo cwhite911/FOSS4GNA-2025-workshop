@@ -136,3 +136,7 @@ can use the following syntax:
 
 The complete list of standard options and flags can be found in the
 [GRASS Parser Options documentation][grass_parser].
+
+## Next Steps
+
+Proceed to [Part 3: Hands-On Project](../part_3_project/project.ipynb)
