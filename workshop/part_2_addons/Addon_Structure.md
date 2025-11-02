@@ -1,5 +1,7 @@
 [grass_parser]: https://grass.osgeo.org/grass85/manuals/parser_standard_options.html
 [grass_keywords]: https://grass.osgeo.org/grass-devel/manuals/keywords.html
+[grass_testing_framework]: https://grass.osgeo.org/grass85/manuals/libpython/gunittest_testing.html#
+[pytest]: https://docs.pytest.org/en/stable/index.html
 
 # Addon structure
 
@@ -13,7 +15,7 @@ r.myaddon
 ├── r.myaddon.html
 ├── r.myaddon.ipynb (optional)
 ├── r.myaddon.py
-└── testsuite
+└── tests
     └── test_r_myaddon.py
 
 ```
@@ -137,6 +139,57 @@ can use the following syntax:
 The complete list of standard options and flags can be found in the
 [GRASS Parser Options documentation][grass_parser].
 
+### Main Functionality
+
+```python
+def main():
+    # Your addon functionality goes here
+    pass
+
+if __name__ == "__main__":
+    main()
+```
+
+### Toolboxes and shared utilities
+
+If your addon includes multiple tools (toolbox) you can create a shared
+utilities library (i.e., utilities.py), to hold common functions used
+across multiple tools.
+
+```text
+r.myaddon/
+├── utils
+    ├── __init__.py
+    ├── Makefile
+    ├── utils.py
+    └── testsuite
+        └── test_utils.py
+├── r.myaddon.a
+    ├── Makefile
+    ├── r.myaddon.html
+    ├── r.myaddon.ipynb (optional)
+    ├── r.myaddon.py
+    └── tests
+        └── test_r_myaddon.py
+├── r.myaddon.b
+    ├── Makefile
+    ├── r.myaddon.html
+    ├── r.myaddon.ipynb (optional)
+    ├── r.myaddon.py
+    └── testsuite
+        └── test_r_myaddon.py
+
+```
+
+### Testing
+
+GRASS addons should include tests to ensure their functionality works as expected.
+Tests are typically located in a `testsuite` or `tests` directory within the
+addon structure. Tests found in the `testsuite` directory use
+[The GRASS Testing framework][grass_testing_framework], `gunittest`, while
+tests found in the `tests` directory utilize [pytest][pytest].
+
 ## Next Steps
 
-Proceed to [Part 3: Hands-On Project](../part_3_project/project.ipynb)
+Proceed to [Developing an addon](./Developing_an_addon.md) to learn how to
+create and contribute your own GRASS addon.
