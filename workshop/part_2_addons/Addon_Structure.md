@@ -130,6 +130,11 @@ can use the following syntax:
 ```python
 # %option G_OPT_R_INPUT
 # %end
+# %option
+# % key input2
+# % description Raster #2
+# % type string
+# %end
 ```
 
 ![keywords rendered as tags](../assets/keywords.png)
