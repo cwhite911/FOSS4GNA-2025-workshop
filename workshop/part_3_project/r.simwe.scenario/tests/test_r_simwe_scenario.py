@@ -1,12 +1,12 @@
-import numpy as np
+# import numpy as np
 
 from grass.tools import Tools
+import grass.script as gs
 
-
-def test_output_exists(session):
-    tools = Tools(session=session, consistent_return_value=False)
-    output = tools.r_simwe_scenario(input="data", output=np.array)
+def test_output_exists(xy_dataset_session):
+    tools = Tools(session=xy_dataset_session, consistent_return_value=True)
+    tools.r_simwe_scenario(elevation="rows_raster", output="output_raster", rain_value=10.0)
     # check that output raster exists
-    assert output is not None
-    # check that output raster has no NaN values
-    assert np.any(np.isnan(output))
+    assert gs.find_file("output_raster", element="raster")["name"] == "output_raster"
+
+# Write your tests here

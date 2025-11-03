@@ -5,22 +5,17 @@ import pytest
 import grass.script as gs
 from grass.experimental import TemporaryMapsetSession
 from grass.tools import Tools
-
-
-@pytest.fixture(scope="module")
-def session_for_module(tmp_path_factory):
-    """Module-scoped session with a raster"""
-    tmp_path = tmp_path_factory.mktemp("data") / "project"
-    gs.create_project(tmp_path)
-    with gs.setup.init(tmp_path, env=os.environ.copy()) as session:
-        tools = Tools(session=session)
-        tools.g_region(n=20, s=0, e=20, w=0, rows=20, cols=20)
-        tools.r_mapcalc(expression="data = 1")
-        yield session
-
+from pathlib import Path
 
 @pytest.fixture
-def session(session_for_module):
-    """A session in a temporary mapset"""
-    with TemporaryMapsetSession(env=session_for_module.env) as session:
+def xy_dataset_session(tmp_path):
+    """Active session in an XY location (scope: function)"""
+    project = tmp_path / "xy_test"
+    gs.create_project(project)
+    with (
+        gs.setup.init(project, env=os.environ.copy()) as session,
+        Tools(session=session) as tools,
+    ):
+        tools.g_region(s=0, n=5, w=0, e=6, res=1)
+        tools.r_mapcalc(expression="rows_raster = row()")
         yield session
