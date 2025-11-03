@@ -22,7 +22,7 @@
 # % keyword: hydrology
 # % keyword: water
 # %end
-# %option G_OPT_R_ELEVS
+# %option G_OPT_R_ELEV
 # %required: yes
 # %end
 # %option G_OPT_R_OUTPUT
@@ -66,8 +66,8 @@ def run_simwe(elevation, dx, dy, rainfall_rate, depth_output, procs, seed, tools
     tools.r_slope_aspect(elevation=elevation, dx=dx, dy=dy)
     tools.r_sim_water(
         elevation=elevation,
-        dx="dx",
-        dy="dy",
+        dx=dx,
+        dy=dy,
         rain_value=rainfall_rate,
         depth=depth_output,
         random_seed=seed,
@@ -77,13 +77,13 @@ def run_simwe(elevation, dx, dy, rainfall_rate, depth_output, procs, seed, tools
 
 def limit_depths(output_raster, depth_raster, min_depth, tools=None):
     """Limit depth raster to values above a minimum depth."""
-    tools.r.mapcalc(
+    tools.r_mapcalc(
         expression=f"{output_raster} = if({depth_raster} >= {min_depth}, {depth_raster}, null())",
         overwrite=True,
     )
 
     # Set color table for output raster back to that of the original depth raster
-    tools.r.colors(map=output_raster, raster=depth_raster)
+    tools.r_colors(map=output_raster, raster=depth_raster)
 
 
 def main():
@@ -125,7 +125,12 @@ def main():
     # flags
     if flags["d"]:
         gs.message(_("Filtering depth..."))
-        limit_depths(output_raster, output_depth_raster, min_depth, tools=tools)
+        limit_depths(
+            output_raster=output_raster,
+            depth_raster=output_depth_raster,
+            min_depth=min_depth,
+            tools=tools
+        )
 
     # save history into the output raster
     gs.raster_history(output_raster, overwrite=True)

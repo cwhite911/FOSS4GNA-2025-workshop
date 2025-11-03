@@ -1,7 +1,6 @@
 ## DESCRIPTION
 
-The purpose of  *r.simwe.scenario* is to compute ...
-Parameter **input** is a ...
+The purpose of  *r.simwe.scenario* is to run simulations of with variable rainfall [mm/hr].
 
 ## NOTES
 
@@ -10,12 +9,16 @@ behavior in a greater detail.
 
 ## EXAMPLE
 
-```sh
-r.simwe.scenario input=input_map output=output_map
+```python
+tools.r_simwe_scenario(elevation=r_simwe_scenario_input, output=r_simwe_scenario_output)
+```
+
+```python
+tools.r_simwe_scenario(elevation=r_simwe_scenario_input, output=r_simwe_scenario_output, flags="d")
 ```
 
 ![r_simwe_scenario example](r_simwe_scenario.png)  
-*Figure: Output from example*
+*Figure: SIMWE scenario with depth filtering.*
 
 ## REFERENCES
 
@@ -24,9 +27,8 @@ This section is optional. List related publications here.
 ## SEE ALSO
 
 List related GRASS tools here.
+*[https://grass.osgeo.org/grass-stable/manuals/g.region.html](r.sim.water.html)*
 
-*[https://grass.osgeo.org/grass-stable/manuals/g.region.html](g.region.html),
-*[https://grass.osgeo.org/grass-stable/manuals/r.mapcalc.html](r.mapcalc.html)*
 
 ## AUTHORS
 
